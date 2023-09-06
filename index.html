@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRTHDAY WISHES</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="birthdayimg">
+        <div class="topleft">
+            <p></p>
+        </div>
+        <div class="middle">
+            <h1>Ready for the Little Suprise ?</h1>
+            <hr>
+            <p id="amx" style="font-size: 80px;"></p>
+        </div>
+        <div class="bottomleft">
+            Made with <i id="heart">💖</i>&amp;<i id="coffee">☕
+          </div>
+    </div>
+    <script>var countDownDate = new Date("Sep 7,2023 00:00:00").getTime();
+
+        var countdownfunction = setInterval(function() {
+        
+            var now =new Date().getTime();
+            var distance=countDownDate-now;
+        
+            var days=Math.floor(distance/(1000*60*60*24));
+            var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor(((distance% (1000 * 60 * 60))/(1000*60)));
+            var seconds=Math.floor((distance % (1000 * 60))/1000);
+            
+            document.getElementById("amx").innerHTML=days+ "D " +hours+ "H"+minutes+ "M"+seconds+ "S";
+        
+            if(distance<0){
+                clearInterval(countdownfunction);
+                document.getElementById('amx').innerHTML="Happy Birthday Haseen Taj";
+            }
+            },1000)
+        </script>
+</body>
+</html>
